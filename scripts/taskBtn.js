@@ -8,5 +8,5 @@ for (const taskBtn of taskCompletedButtons) {
         if (taskDecrement.innerText === "0"){
             alert("Congrates!!! You have completed all the current tasks");
         }
-    })
+        })
 }
