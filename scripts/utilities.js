@@ -20,33 +20,3 @@ const clearHistoryBtn = document.getElementById('clear-history-btn');
 const activityLogBody = document.getElementById("activity-log-body")
 // * Pending Tasks Container
 const taskCompletedButtons = document.getElementsByClassName("task-btn");
-
-// *For Adding Task History to Task Body Section
-function addTaskHistory(taskId){
-    const time = new Date();
-    let hour = time.getHours();
-    let amPm = "";
-    if (hour >= 12){
-        amPm = "PM";
-        if (hour !== 12){
-            hour = hour - 12;
-        }
-    }
-    else{
-        amPm = "AM";
-        if (hour === 0) hour = 12;
-    }
-    const minute = time.getMinutes();
-    let second = new Date().getSeconds();
-    const currentTime = `${hour}:${minute}:${second} ${amPm}`;
-    taskId = taskId.replace("btn", "task");
-    const taskName = document.getElementById(taskId).innerText;
-    const taskHistory = document.createElement('div');
-    taskHistory.innerHTML = `
-    <div class="bg-violet-50 p-2 rounded-lg mb-3">
-        <p class="text-xs">You have Complete The Task ${taskName} at ${currentTime}</p>
-    </div>
-    `
-    activityLogBody.appendChild(taskHistory);
-    
-}
