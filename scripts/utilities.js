@@ -9,4 +9,5 @@ const taskInformationDate = document.getElementById("task-information-date");
 // * Activity Log
 const clearHistoryBtn = document.getElementById('clear-history-btn');
 const activityLogBody = document.getElementById("activity-log-body")
-console.log(clearHistoryBtn);
+// * Pending Tasks Container
+const taskCompletedButtons = document.getElementsByClassName("task-btn");
